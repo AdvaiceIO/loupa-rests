@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Daily Reset Workbook — 28 Days of Mindfulness for Overthinkers</title>
+    <link rel="icon" href="https://app.loupa.ai/lovable-uploads/74e35cca-d461-4e91-bc62-5df9b90a77fe.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Ophelina Regular';
+            src: local('Ophelina Regular'), local('Georgia');
+            font-weight: 400;
+            font-style: normal;
+        }
+        :root {
+            --primary: #923F16;
+            --secondary: #CED3C4;
+            --heading-color: #898F7B;
+            --body-color: #FFFCF8;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Barlow', sans-serif;
+            background: #FFFFFF;
+            color: #333333;
+        }
+        h1, h2, h3, h4 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-weight: 700;
+            color: #898F7B;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .faq-answer.open {
+            max-height: 500px;
+        }
+        .faq-chevron {
+            transition: transform 0.3s ease;
+        }
+        .faq-chevron.rotate {
+            transform: rotate(180deg);
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#923F16',
+                        secondary: '#CED3C4',
+                        headingText: '#898F7B',
+                        bodyText: '#FFFCF8',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!-- SECTION 1: HERO BANNER                       -->
+<!-- ============================================ -->
+<section class="relative w-full overflow-hidden" style="background-color: #1A1510;">
+    <!-- Decorative glows -->
+    <div class="absolute top-0 left-0 w-96 h-96 rounded-full pointer-events-none" style="background: rgba(146,63,22,0.12); filter: blur(80px);"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 rounded-full pointer-events-none" style="background: rgba(206,211,196,0.1); filter: blur(80px);"></div>
+
+    <div class="relative max-w-7xl mx-auto px-6 lg:px-8 py-12 md:py-20">
+        <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+            <!-- Left Column -->
+            <div class="w-full lg:w-[58%] text-left">
+                <!-- Badge -->
+                <div class="inline-flex items-center gap-2 rounded-full px-4 py-1.5 mb-6" style="background: rgba(146,63,22,0.15); border: 1px solid rgba(146,63,22,0.35);">
+                    <svg class="w-4 h-4" fill="#CED3C4" viewBox="0 0 24 24"><path d="M12 2l2.09 6.26L20.18 9.27l-5.09 3.9L17.09 20 12 16.5 6.91 20l2-6.83-5.09-3.9 6.09-1.01z"/></svg>
+                    <span class="text-sm font-semibold" style="color: #CED3C4; font-family: 'Barlow', sans-serif;">Now Available — Your 28-Day Reset Starts Here</span>
+                </div>
+
+                <!-- Heading -->
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6" style="color: #FFFCF8; font-family: Georgia, 'Times New Roman', serif;">
+                    Silence the Overthinking. Build
+                    <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"> Daily Calm.</span>
+                </h1>
+
+                <!-- Subheading -->
+                <p class="text-lg md:text-xl leading-relaxed max-w-xl mb-8" style="color: #a89e91; font-family: 'Barlow', sans-serif; font-weight: 400;">
+                    The Daily Reset Workbook is a 28-day interactive mindfulness guide designed for busy overthinkers. Just 10 minutes a day to reclaim mental clarity, reduce stress, and build grounding habits that actually stick.
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                    <a href="https://advaice.io" class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg font-semibold text-white w-full sm:w-auto transition-colors duration-200" style="background: #923F16; font-family: 'Barlow', sans-serif; font-weight: 600; box-shadow: 0 8px 24px rgba(146,63,22,0.25);" onmouseover="this.style.background='#7a3512'" onmouseout="this.style.background='#923F16'">
+                        Buy Now — $12.95
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </a>
+                    <a href="https://advaice.io" class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg font-semibold w-full sm:w-auto transition-colors duration-200" style="border: 1px solid #4a3f34; color: #CED3C4; font-family: 'Barlow', sans-serif; font-weight: 600;" onmouseover="this.style.background='rgba(74,63,52,0.4)'" onmouseout="this.style.background='transparent'">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        See What's Inside
+                    </a>
+                </div>
+
+                <!-- Social Proof -->
+                <div class="flex items-center gap-3 mt-8">
+                    <div class="flex -space-x-2">
+                        <img src="https://i.pravatar.cc/32?img=1" alt="User" class="w-8 h-8 rounded-full border-2" style="border-color: #1A1510;">
+                        <img src="https://i.pravatar.cc/32?img=5" alt="User" class="w-8 h-8 rounded-full border-2" style="border-color: #1A1510;">
+                        <img src="https://i.pravatar.cc/32?img=9" alt="User" class="w-8 h-8 rounded-full border-2" style="border-color: #1A1510;">
+                        <img src="https://i.pravatar.cc/32?img=14" alt="User" class="w-8 h-8 rounded-full border-2" style="border-color: #1A1510;">
+                        <img src="https://i.pravatar.cc/32?img=20" alt="User" class="w-8 h-8 rounded-full border-2" style="border-color: #1A1510;">
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <svg class="w-4 h-4" fill="#FBBF24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-4 h-4" fill="#FBBF24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-4 h-4" fill="#FBBF24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-4 h-4" fill="#FBBF24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-4 h-4" fill="#FBBF24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    </div>
+                    <span class="text-sm" style="color: #a89e91; font-family: 'Barlow', sans-serif;">Trusted by 2,500+ overthinkers worldwide</span>
+                </div>
+            </div>
+
+            <!-- Right Column — Dashboard/Product Preview -->
+            <div class="w-full lg:w-[42%] relative">
+                <div class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 rounded-full" style="background: radial-gradient(circle, rgba(146,63,22,0.2), transparent 70%); filter: blur(60px);"></div>
+                <img src="https://nyrslifytgbluamxpqzq.supabase.co/storage/v1/object/public/website-images/rests/hero-product.png" alt="The Daily Reset Workbook preview" class="w-full h-auto max-w-md mx-auto rounded-xl shadow-2xl" style="border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 25px 50px rgba(146,63,22,0.15);">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================ -->
+<!-- SECTION 2: STATISTICS / SOCIAL PROOF          -->
+<!-- ============================================ -->
+<section class="w-full" style="background-color: #CED3C4;">
+    <div class="max-w-[1400px] mx-auto px-5 md:px-10 py-10 md:py-16">
+        <!-- Section Label -->
+        <p class="uppercase text-[13px] font-semibold mb-10" style="letter-spacing: 2.5px; color: #898F7B; font-family: 'Barlow', sans-serif;">THE DIFFERENCE</p>
+
+        <!-- Stats Row -->
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+            <!-- Stat 1 -->
+            <div class="flex items-center gap-6 py-6 md:py-0">
+                <span class="stat-number text-[48px] md:text-[60px] lg:text-[90px] font-bold leading-none" style="color: #3D3A35; font-family: Georgia, 'Times New Roman', serif;" data-target="94" aria-label="94%">0<span class="text-[48px] md:text-[60px] lg:text-[90px]">%</span></span>
+                <p class="text-base max-w-[220px]" style="color: #3D3A35; font-family: 'Barlow', sans-serif; font-weight: 400; line-height: 1.5;">Reported reduced overthinking within the first two weeks.</p>
+            </div>
+
+            <!-- Divider (desktop: vertical, mobile: horizontal) -->
+            <div class="hidden md:block w-px h-20" style="background: #3D3A35;"></div>
+            <div class="md:hidden w-4/5 h-px mx-auto" style="background: #3D3A35;"></div>
+
+            <!-- Stat 2 -->
+            <div class="flex items-center gap-6 py-6 md:py-0">
+                <span class="stat-number text-[48px] md:text-[60px] lg:text-[90px] font-bold leading-none" style="color: #3D3A35; font-family: Georgia, 'Times New Roman', serif;" data-target="90" aria-label="90%">0<span class="text-[48px] md:text-[60px] lg:text-[90px]">%</span></span>
+                <p class="text-base max-w-[220px]" style="color: #3D3A35; font-family: 'Barlow', sans-serif; font-weight: 400; line-height: 1.5;">Found the daily exercises easy to complete in under 10 minutes.</p>
+            </div>
+
+            <!-- Divider -->
+            <div class="hidden md:block w-px h-20" style="background: #3D3A35;"></div>
+            <div class="md:hidden w-4/5 h-px mx-auto" style="background: #3D3A35;"></div>
+
+            <!-- Stat 3 -->
+            <div class="flex items-center gap-6 py-6 md:py-0">
+                <span class="stat-number text-[48px] md:text-[60px] lg:text-[90px] font-bold leading-none" style="color: #3D3A35; font-family: Georgia, 'Times New Roman', serif;" data-target="93" aria-label="93%">0<span class="text-[48px] md:text-[60px] lg:text-[90px]">%</span></span>
+                <p class="text-base max-w-[220px]" style="color: #3D3A35; font-family: 'Barlow', sans-serif; font-weight: 400; line-height: 1.5;">Would recommend this workbook to a friend or colleague.</p>
+            </div>
+        </div>
+
+        <!-- Footnote -->
+        <p class="mt-10 text-[13px]" style="color: #5A5A5A; font-family: 'Barlow', sans-serif; font-weight: 400;">*Based on a survey including 500+ current users evaluating self-perceived efficacy.</p>
+    </div>
+</section>
+
+<script>
+(function() {
+    const statNumbers = document.querySelectorAll('.stat-number');
+    let animated = false;
+
+    function animateCountUp(el, target, duration) {
+        const suffix = el.querySelector('span');
+        let start = 0;
+        const startTime = performance.now();
+
+        function update(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            const current = Math.floor(eased * target);
+            el.firstChild.textContent = current;
+            if (progress < 1) {
+                requestAnimationFrame(update);
+            } else {
+                el.firstChild.textContent = target;
+            }
+        }
+        requestAnimationFrame(update);
+    }
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting && !animated) {
+                animated = true;
+                statNumbers.forEach(function(el) {
+                    const target = parseInt(el.getAttribute('data-target'));
+                    animateCountUp(el, target, 2000);
+                });
+                observer.disconnect();
+            }
+        });
+    }, { threshold: 0.2 });
+
+    statNumbers.forEach(function(el) {
+        observer.observe(el);
+    });
+})();
+</script>
+
+
+<!-- ============================================ -->
+<!-- SECTION 3: FEATURED PRODUCT                   -->
+<!-- ============================================ -->
+<section class="w-full bg-white">
+    <div class="max-w-[1200px] mx-auto px-5 md:px-10 py-12 md:py-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-start">
+            <!-- Left Column — Product Image -->
+            <div class="flex items-center justify-center">
+                <div class="w-full rounded-xl overflow-hidden shadow-lg" style="border: 1px solid #E5E7EB;">
+                    <img src="https://nyrslifytgbluamxpqzq.supabase.co/storage/v1/object/public/website-images/rests/product-main.png" alt="The Daily Reset Workbook — 28 Days of Mindfulness" class="w-full h-auto object-contain" style="max-height: 600px;">
+                </div>
+            </div>
+
+            <!-- Right Column — Product Details -->
+            <div class="flex flex-col">
+                <!-- Social Proof Banner -->
+                <div class="inline-flex items-center gap-2 rounded-full px-4 py-2" style="background: rgba(206,211,196,0.35);">
+                    <div class="flex -space-x-2">
+                        <div class="w-8 h-8 rounded-full border-2 border-white flex items-center justify-center text-xs font-bold text-white" style="background: #923F16;">JM</div>
+                        <div class="w-8 h-8 rounded-full border-2 border-white flex items-center justify-center text-xs font-bold text-white" style="background: #898F7B;">KL</div>
+                        <div class="w-8 h-8 rounded-full border-2 border-white flex items-center justify-center text-xs font-bold text-white" style="background: #6B7B5E;">AR</div>
+                    </div>
+                    <span class="text-sm" style="color: #333; font-family: 'Barlow', sans-serif;">
+                        <strong>Jamie</strong>
+                        <svg class="inline w-4 h-4 ml-0.5" fill="#3B82F6" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>,
+                        <strong>Kelly</strong>
+                        <svg class="inline w-4 h-4 ml-0.5" fill="#3B82F6" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        and 2,500+ others love it!
+                    </span>
+                </div>
+
+                <!-- Product Title -->
+                <h2 class="mt-4 text-3xl md:text-4xl font-bold" style="color: #898F7B; font-family: Georgia, 'Times New Roman', serif;">The Daily Reset Workbook</h2>
+
+                <!-- Price -->
+                <div class="mt-3 flex items-center gap-3">
+                    <span class="text-2xl font-bold" style="color: #923F16; font-family: 'Barlow', sans-serif;">$12.95 USD</span>
+                    <span class="text-lg line-through" style="color: #999; font-family: 'Barlow', sans-serif;">$22.95 USD</span>
+                    <span class="text-sm font-semibold px-2 py-1 rounded-full" style="background: rgba(146,63,22,0.12); color: #923F16; font-family: 'Barlow', sans-serif;">Save 44%</span>
+                </div>
+
+                <!-- Stock Status -->
+                <div class="mt-4 flex items-center gap-2 rounded-full px-4 py-3" style="background: rgba(206,211,196,0.3);">
+                    <div class="w-2 h-2 rounded-full" style="background: #923F16;"></div>
+                    <span class="text-sm font-semibold" style="color: #923F16; font-family: 'Barlow', sans-serif;">Instant digital delivery — download immediately</span>
+                </div>
+
+                <!-- Feature Checklist -->
+                <div class="mt-5 space-y-3">
+                    <div class="flex items-center gap-3">
+                        <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0" style="background: #923F16;">
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="white" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                        </div>
+                        <span class="text-[15px]" style="color: #333; font-family: 'Barlow', sans-serif;">28 days of guided, science-backed mindfulness exercises</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0" style="background: #923F16;">
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="white" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                        </div>
+                        <span class="text-[15px]" style="color: #333; font-family: 'Barlow', sans-serif;">Takes only 10 minutes or less per day</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0" style="background: #923F16;">
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="white" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                        </div>
+                        <span class="text-[15px]" style="color: #333; font-family: 'Barlow', sans-serif;">Interactive PDF — write directly on your device</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0" style="background: #923F16;">
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="white" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                        </div>
+                        <span class="text-[15px]" style="color: #333; font-family: 'Barlow', sans-serif;">Designed specifically for overthinkers & busy professionals</span>
+                    </div>
+                </div>
+
+                <!-- Countdown Timer -->
+                <div class="mt-6">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-sm" style="color: #6B7280; font-family: 'Barlow', sans-serif;">Special price ends in:</span>
+                        <span class="text-xl font-bold" style="color: #923F16; font-family: 'Barlow', sans-serif;" id="countdown-timer">45:49</span>
+                    </div>
+                    <div class="w-full h-2 rounded-full overflow-hidden" style="background: #E5E7EB;">
+                        <div class="h-full rounded-full transition-all duration-1000" style="background: #923F16; width: 75%;" id="countdown-bar"></div>
+                    </div>
+                </div>
+
+                <!-- Buy Now Button -->
+                <a href="https://advaice.io" class="mt-5 w-full inline-flex items-center justify-center gap-2 py-4 rounded-xl font-semibold text-lg text-white transition-colors duration-200" style="background: #923F16; font-family: 'Barlow', sans-serif; font-weight: 600;" onmouseover="this.style.background='#7a3512'" onmouseout="this.style.background='#923F16'">
+                    Buy Now — $12.95
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+
+                <!-- Payment Icons -->
+                <div class="mt-4 flex items-center justify-center gap-3 flex-wrap">
+                    <div class="px-3 py-1.5 rounded-md text-xs font-semibold" style="border: 1px solid #E5E7EB; color: #666; font-family: 'Barlow', sans-serif;">VISA</div>
+                    <div class="px-3 py-1.5 rounded-md text-xs font-semibold" style="border: 1px solid #E5E7EB; color: #666; font-family: 'Barlow', sans-serif;">Mastercard</div>
+                    <div class="px-3 py-1.5 rounded-md text-xs font-semibold" style="border: 1px solid #E5E7EB; color: #666; font-family: 'Barlow', sans-serif;">PayPal</div>
+                    <div class="px-3 py-1.5 rounded-md text-xs font-semibold" style="border: 1px solid #E5E7EB; color: #666; font-family: 'Barlow', sans-serif;">Apple Pay</div>
+                    <div class="px-3 py-1.5 rounded-md text-xs font-semibold" style="border: 1px solid #E5E7EB; color: #666; font-family: 'Barlow', sans-serif;">Google Pay</div>
+                    <div class="px-3 py-1.5 rounded-md text-xs font-semibold" style="border: 1px solid #E5E7EB; color: #666; font-family: 'Barlow', sans-serif;">Stripe</div>
+                </div>
+
+                <!-- Description -->
+                <p class="mt-5 text-[15px] leading-relaxed" style="color: #4B5563; font-family: 'Barlow', sans-serif; font-weight: 400;">
+                    The Daily Reset Workbook is a 28-day interactive PDF designed for overthinkers who crave mental clarity. Each day features guided reflections, refocus triggers, body-awareness exercises, and daily reset check-ins — all completable in 10 minutes or less. Built on habit formation science, it helps you embody mindfulness instead of just reading about it.
+                </p>
+
+                <!-- Feature Highlights Bar -->
+                <div class="mt-4 rounded-xl p-4 flex items-center justify-between gap-4" style="border: 1px solid #E5E7EB;">
+                    <div class="flex flex-col items-center text-center flex-1">
+                        <svg class="w-6 h-6 mb-1" fill="none" stroke="#923F16" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                        <span class="text-sm font-bold" style="color: #333;">10 Min</span>
+                        <span class="text-xs" style="color: #6B7280;">daily tasks</span>
+                    </div>
+                    <div class="w-px h-10" style="background: #E5E7EB;"></div>
+                    <div class="flex flex-col items-center text-center flex-1">
+                        <svg class="w-6 h-6 mb-1" fill="none" stroke="#923F16" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                        <span class="text-sm font-bold" style="color: #333;">28 Days</span>
+                        <span class="text-xs" style="color: #6B7280;">guided plan</span>
+                    </div>
+                    <div class="w-px h-10" style="background: #E5E7EB;"></div>
+                    <div class="flex flex-col items-center text-center flex-1">
+                        <svg class="w-6 h-6 mb-1" fill="none" stroke="#923F16" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        <span class="text-sm font-bold" style="color: #333;">Interactive</span>
+                        <span class="text-xs" style="color: #6B7280;">fillable PDF</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+(function() {
+    let totalSeconds = 45 * 60 + 49;
+    const timerEl = document.getElementById('countdown-timer');
+    const barEl = document.getElementById('countdown-bar');
+    const initialSeconds = totalSeconds;
+
+    function updateTimer() {
+        if (totalSeconds <= 0) return;
+        totalSeconds--;
+        const minutes = Math.floor(totalSeconds / 60);
+        const seconds = totalSeconds % 60;
+        timerEl.textContent = String(minutes).padStart(2, '0') + ':' + String(seconds).padStart(2, '0');
+        barEl.style.width = (totalSeconds / initialSeconds * 100) + '%';
+    }
+
+    setInterval(updateTimer, 1000);
+})();
+</script>
+
+
+<!-- ============================================ -->
+<!-- SECTION 4: TWO-COLUMN FEATURE                 -->
+<!-- ============================================ -->
+<section class="w-full bg-white py-12 px-6 md:py-16 lg:py-20 lg:px-16">
+    <div class="max-w-[1400px] mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
+            <!-- Left Column — Text Block -->
+            <div class="rounded-2xl p-8 lg:p-14 flex flex-col justify-center relative min-h-[400px] lg:min-h-[500px]" style="background: #CED3C4;">
+                <!-- Decorative Badge -->
+                <div class="absolute top-6 right-6 w-20 h-20 lg:w-24 lg:h-24 flex items-center justify-center rounded-full text-center" style="background: #923F16; transform: rotate(12deg);">
+                    <span class="text-[10px] lg:text-[11px] font-bold leading-tight text-white px-2" style="font-family: 'Barlow', sans-serif;">INSTANT DIGITAL DOWNLOAD</span>
+                </div>
+
+                <h2 class="text-3xl lg:text-5xl font-bold leading-tight mb-6" style="color: #898F7B; font-family: Georgia, 'Times New Roman', serif;">
+                    Designed for<br>Overthinkers.
+                </h2>
+
+                <p class="text-base lg:text-lg leading-relaxed mb-8 max-w-[450px]" style="color: #3D3A35; font-family: 'Barlow', sans-serif; font-weight: 400;">
+                    Most mindfulness tools ask you to sit still and empty your mind. We know that's nearly impossible when your brain won't stop racing. This workbook meets you where you are — with short, interactive tasks that redirect your mental energy toward calm and clarity.
+                </p>
+
+                <a href="https://advaice.io" class="inline-flex items-center gap-2 px-7 py-4 rounded-full font-semibold text-base text-white transition-colors duration-200 w-fit" style="background: #923F16; font-family: 'Barlow', sans-serif; font-weight: 600;" onmouseover="this.style.background='#7a3512'" onmouseout="this.style.background='#923F16'">
+                    Buy Now — $12.95
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+            </div>
+
+            <!-- Right Column — Image -->
+            <div class="rounded-2xl overflow-hidden min-h-[350px] lg:min-h-[500px]">
+                <img src="https://nyrslifytgbluamxpqzq.supabase.co/storage/v1/object/public/website-images/rests/feature-image.png" alt="A woman finding calm through daily mindfulness practice" class="w-full h-full object-cover rounded-2xl">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================ -->
+<!-- SECTION 5: TESTIMONIALS                       -->
+<!-- ============================================ -->
+<section class="w-full" style="background-color: #CED3C4;">
+    <div class="max-w-[1200px] mx-auto py-10 md:py-20 px-5 md:px-6">
+        <!-- Heading -->
+        <h2 class="text-center text-[28px] md:text-[40px] italic mb-12" style="color: #898F7B; font-family: Georgia, 'Times New Roman', serif; font-weight: 700;">
+            Trusted by Overthinkers Everywhere
+        </h2>
+
+        <!-- Carousel Container -->
+        <div class="relative overflow-hidden">
+            <div class="flex transition-transform duration-500 ease-in-out" id="testimonial-track">
+                <!-- Slide 1 (3 cards) -->
+                <div class="w-full flex-shrink-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <article class="bg-white rounded-xl shadow-md px-8 py-10 text-center flex flex-col items-center">
+                        <div class="flex gap-1 mb-5">
+                            <svg class="w-5 h-5" fill="#FBBF24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5" fill="#FBBF24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5" fill="#FBBF24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5" fill="#FBBF24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5" fill="#FBBF24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        </div>
+                        <p class="text-lg leading-relaxed mb-8" style="color: #333; font-family: 'Barlow', sans-serif;">"I'm a chronic overthinker and this workbook has been a game-changer. The 10-minute exercises fit perfectly into my morning routine before work."</p>
+                        <img src="https://i.pravatar.cc/80?img=32" alt="Sarah K." class="w-20 h-20 rounded-full border-3 mb-3 object-cover" style="border: 3px solid #f0e8e8;">
+                        <h4 class="text-lg font-semibold" style="color: #333; font-family: 'Barlow', sans-serif;">Sarah K.</h4>
+                        <p class="text-sm" style="color: #777; font-family: 'Barlow', sans-serif;">Marketing Manager</p>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="bg-white rounded-xl shadow-md px-8 py-10 text-center flex flex-col items-center">
+                        <div class="flex gap-1 mb-5">
+                            <svg class="w-5 h-5" fill="#FBBF24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5" fill="#FBBF24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5" fill="#FBBF24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5" fill="#FBBF24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5" fill="#FBBF24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        </div>
+                        <p class="text-lg leading-relaxed mb-8" style="color: #333; font-family: 'Barlow', sans-serif;">"I especially love the refocus triggers — they've become my go-to when anxiety spikes at work. Simple but incredibly effective."</p>
+                        <img src="https://i.pravatar.cc/80?img=11" alt="David L." class="w-20 h-20 rounded-full border-3 mb-3 object-cover" style="border: 3px solid #f0e8e8;">
+                        <h4 class="text-lg font-semibold" style="color: #333; font-family: 'Barlow', sans-serif;">David L.</h4>
+                        <p class="text-sm" style="color: #777; font-family: 'Barlow', sans-serif;">Software Engineer</p>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="bg-white rounded-xl shadow-md px-8 py-10 text-center flex flex-col items-center">
+                        <div class="flex gap-1 mb-5">
+                            <svg class="w-5 h-5" fill="#FBBF24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5" fill="#FBBF24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5" fill="#FBBF24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5" fill="#FBBF24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5" fill="#FBBF24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        </div>
+                        <p class="text-lg leading-relaxed mb-8" style="color: #333; font-family: 'Barlow', sans-serif;">"As a nursing student with constant brain fog, this workbook helped me build a daily grounding practice. The body-awareness exercises are my favorite."</p>
+                        <img src="https://i.pravatar.cc/80?img=23" alt="Michelle R." class="w-20 h-20 rounded-full border-3 mb-3 object-cover" style="border: 3px solid #f0e8e8;">
+                        <h4 class="text-lg font-semibold" style="color: #333; font-family: 'Barlow', sans-serif;">Michelle R.</h4>
+                        <p class="text-sm" style="color: #777; font-family: 'Barlow', sans-serif;">Nursing Student</p>
+                    </article>
+                </div>
+
+                <!-- Slide 2 (3 cards) -->
+                <div class="w-full flex-shrink-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Card 4 -->
+                    <article class="bg-white rounded-xl shadow-md px-8 py-10 text-center flex flex-col items-center">
+                        <div class="flex gap-1 mb-5">
+                            <svg class="w-5 h-5" fill="#FBBF24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5" fill="#FBBF24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5" fill="#FBBF24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5" fill="#FBBF24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5" fill="#FBBF24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        </div>
+                        <p class="text-lg leading-relaxed mb-8" style="color: #333; font-family: 'Barlow', sans-serif;">"I bought this for my partner who struggles with anxiety. By week 2, they were calmer, more present, and actually looked forward to the exercises."</p>
+                        <img src="https://i.pravatar.cc/80?img=44" alt="Alex T." class="w-20 h-20 rounded-full border-3 mb-3 object-cover" style="border: 3px solid #f0e8e8;">
+                        <h4 class="text-lg font-semibold" style="color: #333; font-family: 'Barlow', sans-serif;">Alex T.</h4>
+                        <p class="text-sm" style="color: #777; font-family: 'Barlow', sans-serif;">Freelance Writer</p>
+                    </article>
+
+                    <!-- Card 5 -->
+                    <article class="bg-white rounded-xl shadow-md px-8 py-10 text-center flex flex-col items-center">
+                        <div class="flex gap-1 mb-5">
+                            <svg class="w-5 h-5" fill="#FBBF24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5" fill="#FBBF24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5" fill="#FBBF24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5" fill="#FBBF24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5" fill="#FBBF24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        </div>
+                        <p class="text-lg leading-relaxed mb-8" style="color: #333; font-family: 'Barlow', sans-serif;">"Finally, a mindfulness resource that doesn't ask me to sit still for 30 minutes. The daily check-ins are practical, warm, and refreshingly honest."</p>
+                        <img src="https://i.pravatar.cc/80?img=47" alt="Priya M." class="w-20 h-20 rounded-full border-3 mb-3 object-cover" style="border: 3px solid #f0e8e8;">
+                        <h4 class="text-lg font-semibold" style="color: #333; font-family: 'Barlow', sans-serif;">Priya M.</h4>
+                        <p class="text-sm" style="color: #777; font-family: 'Barlow', sans-serif;">Caregiver & Mom</p>
+                    </article>
+
+                    <!-- Card 6 -->
+                    <article class="bg-white rounded-xl shadow-md px-8 py-10 text-center flex flex-col items-center">
+                        <div class="flex gap-1 mb-5">
+                            <svg class="w-5 h-5" fill="#FBBF24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5" fill="#FBBF24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5" fill="#FBBF24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5" fill="#FBBF24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5" fill="#FBBF24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        </div>
+                        <p class="text-lg leading-relaxed mb-8" style="color: #333; font-family: 'Barlow', sans-serif;">"I've tried meditation apps, therapy journals, you name it. This was the first thing that actually stuck because each day is different and engaging."</p>
+                        <img src="https://i.pravatar.cc/80?img=53" alt="James W." class="w-20 h-20 rounded-full border-3 mb-3 object-cover" style="border: 3px solid #f0e8e8;">
+                        <h4 class="text-lg font-semibold" style="color: #333; font-family: 'Barlow', sans-serif;">James W.</h4>
+                        <p class="text-sm" style="color: #777; font-family: 'Barlow', sans-serif;">Graduate Student</p>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Arrow Navigation -->
+            <button id="testimonial-prev" class="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center shadow-lg z-10 transition-colors duration-200" style="background: #923F16;" onmouseover="this.style.background='#7a3512'" onmouseout="this.style.background='#923F16'">
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+            </button>
+            <button id="testimonial-next" class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center shadow-lg z-10 transition-colors duration-200" style="background: #923F16;" onmouseover="this.style.background='#7a3512'" onmouseout="this.style.background='#923F16'">
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </button>
+        </div>
+
+        <!-- Pagination Dots -->
+        <div class="flex items-center justify-center gap-2 mt-10">
+            <div class="w-2.5 h-2.5 rounded-full testimonial-dot" style="background: #923F16;"></div>
+            <div class="w-2.5 h-2.5 rounded-full testimonial-dot" style="background: #aaa;"></div>
+        </div>
+    </div>
+</section>
+
+<script>
+(function() {
+    const track = document.getElementById('testimonial-track');
+    const prevBtn = document.getElementById('testimonial-prev');
+    const nextBtn = document.getElementById('testimonial-next');
+    const dots = document.querySelectorAll('.testimonial-dot');
+    let currentSlide = 0;
+    const totalSlides = 2;
+
+    function updateSlide() {
+        track.style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
+        dots.forEach(function(dot, i) {
+            dot.style.background = i === currentSlide ? '#923F16' : '#aaa';
+        });
+    }
+
+    prevBtn.addEventListener('click', function() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateSlide();
+    });
+
+    nextBtn.addEventListener('click', function() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateSlide();
+    });
+
+    dots.forEach(function(dot, i) {
+        dot.addEventListener('click', function() {
+            currentSlide = i;
+            updateSlide();
+        });
+        dot.style.cursor = 'pointer';
+    });
+})();
+</script>
+
+
+<!-- ============================================ -->
+<!-- SECTION 6: PRODUCT FEATURES                   -->
+<!-- ============================================ -->
+<section class="w-full bg-white">
+    <div class="max-w-6xl mx-auto px-6 md:px-8 py-16 md:py-24">
+        <!-- Header -->
+        <div class="text-center mb-12 md:mb-16">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6" style="color: #898F7B; font-family: Georgia, 'Times New Roman', serif;">
+                Your Daily Reset, Simplified.
+            </h2>
+            <p class="text-lg max-w-2xl mx-auto" style="color: #666; font-family: 'Barlow', sans-serif; font-weight: 400;">
+                Experience the clarity that comes from a workbook designed around habit science, body awareness, and micro-mindfulness practices tailored for busy minds.
+            </p>
+        </div>
+
+        <!-- Two Column -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <!-- Left — Product Image -->
+            <div class="flex justify-center">
+                <img src="https://nyrslifytgbluamxpqzq.supabase.co/storage/v1/object/public/website-images/rests/product-features.png" alt="Inside The Daily Reset Workbook" class="max-w-md w-full drop-shadow-lg rounded-xl">
+            </div>
+
+            <!-- Right — Features Card -->
+            <div class="rounded-2xl p-6 md:p-10 space-y-6 md:space-y-10" style="background: #f7f7f4; border: 1px solid #e8e8e4;">
+                <!-- Feature 1 -->
+                <div>
+                    <div class="flex items-center mb-2">
+                        <svg class="w-7 h-7 flex-shrink-0" fill="none" stroke="#923F16" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        <h3 class="text-lg font-bold ml-3" style="color: #898F7B; font-family: Georgia, 'Times New Roman', serif;">Science-Backed Habit Formation</h3>
+                    </div>
+                    <p class="text-base leading-relaxed" style="color: #666; font-family: 'Barlow', sans-serif; font-weight: 400;">Each of the 28 days is structured around proven behavioral science strategies that make mindfulness stick — not just another fleeting routine.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div>
+                    <div class="flex items-center mb-2">
+                        <svg class="w-7 h-7 flex-shrink-0" fill="none" stroke="#923F16" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                        <h3 class="text-lg font-bold ml-3" style="color: #898F7B; font-family: Georgia, 'Times New Roman', serif;">Refocus Triggers for Anxiety Spikes</h3>
+                    </div>
+                    <p class="text-base leading-relaxed" style="color: #666; font-family: 'Barlow', sans-serif; font-weight: 400;">Quick-access grounding techniques you can use in the moment — during a meeting, before bed, or when the mental spiral starts.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div>
+                    <div class="flex items-center mb-2">
+                        <svg class="w-7 h-7 flex-shrink-0" fill="none" stroke="#923F16" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                        <h3 class="text-lg font-bold ml-3" style="color: #898F7B; font-family: Georgia, 'Times New Roman', serif;">Body-Awareness Exercises</h3>
+                    </div>
+                    <p class="text-base leading-relaxed" style="color: #666; font-family: 'Barlow', sans-serif; font-weight: 400;">Gentle somatic practices that reconnect your mind and body, helping you notice tension before it turns into overwhelm.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div>
+                    <div class="flex items-center mb-2">
+                        <svg class="w-7 h-7 flex-shrink-0" fill="none" stroke="#923F16" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+                        <h3 class="text-lg font-bold ml-3" style="color: #898F7B; font-family: Georgia, 'Times New Roman', serif;">Daily Reset Check-Ins</h3>
+                    </div>
+                    <p class="text-base leading-relaxed" style="color: #666; font-family: 'Barlow', sans-serif; font-weight: 400;">End each day with a simple, guided check-in that tracks your progress, celebrates small wins, and prepares your mind for restful sleep.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================ -->
+<!-- SECTION 7: FAQ                                -->
+<!-- ============================================ -->
+<section class="w-full py-12 px-4 lg:py-16 lg:px-8">
+    <div class="max-w-[1400px] mx-auto rounded-3xl p-6 md:p-8 lg:p-16" style="background: #CED3C4;">
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-16">
+            <!-- Left Column -->
+            <div class="lg:col-span-2 flex flex-col justify-center">
+                <h2 class="text-3xl lg:text-5xl font-bold leading-tight mb-5" style="color: #898F7B; font-family: Georgia, 'Times New Roman', serif; line-height: 1.15;">
+                    Have Questions? We Have Answers.
+                </h2>
+                <p class="text-base mb-8" style="color: #5C6B63; font-family: 'Barlow', sans-serif; font-weight: 400;">
+                    Get quick solutions to your common questions about The Daily Reset Workbook, from what's inside to how it's delivered.
+                </p>
+                <a href="https://advaice.io" class="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-semibold text-base text-white transition-colors duration-200 w-fit" style="background: #923F16; font-family: 'Barlow', sans-serif; font-weight: 600;" onmouseover="this.style.background='#7a3512'" onmouseout="this.style.background='#923F16'">
+                    Buy Now
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+            </div>
+
+            <!-- Right Column — FAQ Accordion -->
+            <div class="lg:col-span-3 space-y-3" id="faq-container">
+                <!-- FAQ 1 -->
+                <div class="bg-white rounded-xl px-7 py-6">
+                    <button class="w-full flex justify-between items-center text-left faq-trigger" aria-expanded="false" aria-controls="faq-1">
+                        <span class="font-bold text-lg pr-4" style="color: #3D3A35; font-family: 'Barlow', sans-serif;">What exactly is The Daily Reset Workbook?</span>
+                        <svg class="w-5 h-5 flex-shrink-0 faq-chevron transition-transform duration-300" fill="none" stroke="#3D3A35" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="faq-answer" id="faq-1">
+                        <p class="text-[15px] leading-relaxed pt-3" style="color: #5C6B63; font-family: 'Barlow', sans-serif; font-weight: 400;">It's a 28-day interactive PDF workbook designed specifically for overthinkers. Each day includes guided reflections, refocus triggers, body-awareness exercises, and daily reset check-ins — all completable in 10 minutes or less.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-white rounded-xl px-7 py-6">
+                    <button class="w-full flex justify-between items-center text-left faq-trigger" aria-expanded="false" aria-controls="faq-2">
+                        <span class="font-bold text-lg pr-4" style="color: #3D3A35; font-family: 'Barlow', sans-serif;">How is it delivered? Do I get a physical book?</span>
+                        <svg class="w-5 h-5 flex-shrink-0 faq-chevron transition-transform duration-300" fill="none" stroke="#3D3A35" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="faq-answer" id="faq-2">
+                        <p class="text-[15px] leading-relaxed pt-3" style="color: #5C6B63; font-family: 'Barlow', sans-serif; font-weight: 400;">This is a digital product — an interactive PDF that's delivered instantly after purchase. You can fill it in on your tablet, computer, or print it at home. No shipping, no waiting.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-white rounded-xl px-7 py-6">
+                    <button class="w-full flex justify-between items-center text-left faq-trigger" aria-expanded="false" aria-controls="faq-3">
+                        <span class="font-bold text-lg pr-4" style="color: #3D3A35; font-family: 'Barlow', sans-serif;">Do I need meditation experience to use this?</span>
+                        <svg class="w-5 h-5 flex-shrink-0 faq-chevron transition-transform duration-300" fill="none" stroke="#3D3A35" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="faq-answer" id="faq-3">
+                        <p class="text-[15px] leading-relaxed pt-3" style="color: #5C6B63; font-family: 'Barlow', sans-serif; font-weight: 400;">Not at all. This workbook is designed for complete beginners and people who struggle with traditional meditation. The exercises are text-led, interactive, and action-oriented — no sitting still with an empty mind required.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-white rounded-xl px-7 py-6">
+                    <button class="w-full flex justify-between items-center text-left faq-trigger" aria-expanded="false" aria-controls="faq-4">
+                        <span class="font-bold text-lg pr-4" style="color: #3D3A35; font-family: 'Barlow', sans-serif;">How long does each daily exercise take?</span>
+                        <svg class="w-5 h-5 flex-shrink-0 faq-chevron transition-transform duration-300" fill="none" stroke="#3D3A35" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="faq-answer" id="faq-4">
+                        <p class="text-[15px] leading-relaxed pt-3" style="color: #5C6B63; font-family: 'Barlow', sans-serif; font-weight: 400;">Each daily task is designed to take 10 minutes or less. It's built for busy professionals, students, and caregivers who don't have time for lengthy practices but still need mental relief.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="bg-white rounded-xl px-7 py-6">
+                    <button class="w-full flex justify-between items-center text-left faq-trigger" aria-expanded="false" aria-controls="faq-5">
+                        <span class="font-bold text-lg pr-4" style="color: #3D3A35; font-family: 'Barlow', sans-serif;">What payment methods do you accept?</span>
+                        <svg class="w-5 h-5 flex-shrink-0 faq-chevron transition-transform duration-300" fill="none" stroke="#3D3A35" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="faq-answer" id="faq-5">
+                        <p class="text-[15px] leading-relaxed pt-3" style="color: #5C6B63; font-family: 'Barlow', sans-serif; font-weight: 400;">We accept Visa, MasterCard, American Express, PayPal, Apple Pay, and Google Pay. Your payment is processed securely through our checkout partner.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 6 -->
+                <div class="bg-white rounded-xl px-7 py-6">
+                    <button class="w-full flex justify-between items-center text-left faq-trigger" aria-expanded="false" aria-controls="faq-6">
+                        <span class="font-bold text-lg pr-4" style="color: #3D3A35; font-family: 'Barlow', sans-serif;">Can I reuse the workbook after 28 days?</span>
+                        <svg class="w-5 h-5 flex-shrink-0 faq-chevron transition-transform duration-300" fill="none" stroke="#3D3A35" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="faq-answer" id="faq-6">
+                        <p class="text-[15px] leading-relaxed pt-3" style="color: #5C6B63; font-family: 'Barlow', sans-serif; font-weight: 400;">Absolutely! Since it's a digital PDF, you can reset the fillable fields or simply print a fresh copy. Many users go through the workbook multiple times, discovering new insights with each cycle.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+(function() {
+    const triggers = document.querySelectorAll('.faq-trigger');
+
+    triggers.forEach(function(trigger) {
+        trigger.addEventListener('click', function() {
+            const answer = this.nextElementSibling;
+            const chevron = this.querySelector('.faq-chevron');
+            const isOpen = answer.classList.contains('open');
+
+            // Close all
+            document.querySelectorAll('.faq-answer').forEach(function(a) {
+                a.classList.remove('open');
+                a.style.maxHeight = '0';
+            });
+            document.querySelectorAll('.faq-chevron').forEach(function(c) {
+                c.classList.remove('rotate');
+            });
+            document.querySelectorAll('.faq-trigger').forEach(function(t) {
+                t.setAttribute('aria-expanded', 'false');
+            });
+
+            // Toggle clicked
+            if (!isOpen) {
+                answer.classList.add('open');
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+                chevron.classList.add('rotate');
+                this.setAttribute('aria-expanded', 'true');
+            }
+        });
+    });
+})();
+</script>
+
+</body>
+</html>
